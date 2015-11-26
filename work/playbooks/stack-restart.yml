@@ -6,25 +6,30 @@
 - hosts: loadbalancer
   become: true
   tasks:
-      service: name=nginx state=stopped
+    - service: name=nginx state=stopped
+    - wait_for: port=80 state=drained
 
 - hosts: webserver
   become: true
   tasks:
-      service: name=apache2 state=stopped
+    - service: name=apache2 state=stopped
+    - wait_for: port=80 state=stopped
 
 - hosts: database
   become: true
   tasks:
-      service: name=nginx state=restarted
+    - service: name=mysql state=restarted
+    - wait_for: port=3306
 
 - hosts: webserver
   become: true
   tasks:
-      service: name=apache2 state=started
+    - service: name=apache2 state=started
+    - wait_for: port=80
 
 - hosts: loadbalancer
   become: true
   tasks:
-      service: name=nginx state=started
+    - service: name=nginx state=started
+    - wait_for: port=80
 
