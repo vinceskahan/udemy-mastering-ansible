@@ -25,6 +25,10 @@
       copy: src=demo/demo.conf dest=/etc/apache2/sites-available mode=0755
       notify: restart apache2
 
+    - name: setup python virtualenv
+      pip: requirements=/var/www/demo/requirements.txt virtualenv=/var/www/demo/.venv
+      notify: restart apache2
+
   handlers:
     - name: restart apache2
       service: name=apache2 state=restarted
