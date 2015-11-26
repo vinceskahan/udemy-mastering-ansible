@@ -12,6 +12,7 @@ sudo echo "######################################"
 sudo echo "####  verify  ansible on control  ####"
 sudo echo "######################################"
 sudo ansible --version
+sudo ansible-playbook --version
 sudo ansible-galaxy --help
 
 # set up ansible to reference files on the host os
