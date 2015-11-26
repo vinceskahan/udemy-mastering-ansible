@@ -26,7 +26,7 @@ sudo mkdir -p /etc/ansible
 sudo ln -s /vagrant-nox/work/ansible.cfg /etc/ansible/ansible.cfg  
 sudo ln -s /vagrant-nox/work/vimrc       /home/vagrant/.vimrc      
 sudo ln -s /vagrant-nox/work/vimrc       /root/.vimrc
-sudo ln -s /vagrant-nox/work             /vagrant/work
+sudo ln -s /vagrant-nox/work             /home/vagrant/work
 
              	
 
