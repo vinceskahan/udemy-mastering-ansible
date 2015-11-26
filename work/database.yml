@@ -1,5 +1,6 @@
 ---
 - hosts: database
+  become: true
   tasks:
     - name: install mysql-server
       apt: name=mysql-server state=present update_cache=yes cache_valid_time=86400
