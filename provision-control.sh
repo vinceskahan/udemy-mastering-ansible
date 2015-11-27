@@ -34,5 +34,9 @@ sudo ln -s /vagrant-nox/work             /home/vagrant/work
 # this should be unneeded but seems to be needed as of lecture31
 sudo echo "  identityfile ~/.ssh/id_rsa" >> ~/.ssh/config
 sudo echo "  identityfile ~/.ssh/id_rsa" >> /home/vagrant/.ssh/config
-             	
+
+# symlink out the vault password (lesson 38) to the mounted volume
+# - this is of course ridiculous for a real system, but it lets
+#   use automate this course to not have anything manual to do
+sudo ln -s /vagrant-nox/control-vault-pass /home/vagrant/.vault_pass.txt
 
