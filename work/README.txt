@@ -17,3 +17,7 @@ lecture 27
 mkdir roles
 ansible-galaxy init rolenamehere
 
+
+lecture 31
+==========
+for vagrant, it's eth1 not eth0 to edit (make sure it matches addresses in /etc/hosts)

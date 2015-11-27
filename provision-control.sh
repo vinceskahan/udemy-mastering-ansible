@@ -29,5 +29,10 @@ sudo ln -s /vagrant-nox/work/vimrc       /home/vagrant/.vimrc
 sudo ln -s /vagrant-nox/work/vimrc       /root/.vimrc
 sudo ln -s /vagrant-nox/work             /home/vagrant/work
 
+
+# force identity file we'll use
+# this should be unneeded but seems to be needed as of lecture31
+sudo echo "  identityfile ~/.ssh/id_rsa" >> ~/.ssh/config
+sudo echo "  identityfile ~/.ssh/id_rsa" >> /home/vagrant/.ssh/config
              	
 
