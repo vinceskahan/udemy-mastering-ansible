@@ -10,5 +10,10 @@ added valid_cache_time=86400 to speed things up (actually covered in lecture 42)
 
 lecture 15
 ==========
-
 use of 'wget -qO- http://lb01' as an equivalent to 'curl lib01'
+
+lecture 27
+==========
+mkdir roles
+ansible-galaxy init rolenamehere
+
