@@ -1,2 +1,18 @@
 ---
-# tasks file for apache2
+- name: install web components
+  apt: name={{item}} state=present update_cache=yes cache_valid_time=86400
+  with_items:
+    - apache2
+    - libapache2-mod-wsgi
+
+- name: ensure mod-wsgi enabled
+  apache2_module: state=present name=wsgi
+  notify: restart apache2
+
+- name: deactivate default site
+  file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+  notify: restart apache2
+
+- name: ensure apache2 started
+  service: name=apache2 state=started enabled=yes
+

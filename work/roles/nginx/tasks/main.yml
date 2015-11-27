@@ -1,2 +1,24 @@
 ---
-# tasks file for nginx
+- name: install tools
+  apt: name={{item}} state=present update_cache=yes cache_valid_time=86400
+  with_items:
+    - python-httplib2
+
+- name: install nginx
+  apt: name=nginx state=present update_cache=yes cache_valid_time=86400
+
+- name: configure nginx site
+  template: src=nginx.conf.j2 dest=/etc/nginx/sites-available/demo mode=0644
+  notify: restart nginx
+
+- name: remove default site
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify: restart nginx
+
+- name: activate demo site
+  file: src=/etc/nginx/sites-available/demo dest=/etc/nginx/sites-enabled/demo state=link
+  notify: restart nginx
+
+- name: ensure nginx started
+  service: name=nginx state=started enabled=yes
+
