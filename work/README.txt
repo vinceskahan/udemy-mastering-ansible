@@ -17,7 +17,14 @@ lecture 27
 mkdir roles
 ansible-galaxy init rolenamehere
 
-
 lecture 31
 ==========
 for vagrant, it's eth1 not eth0 to edit (make sure it matches addresses in /etc/hosts)
+
+lecture 33
+===========
+he puts vars in three places:
+  - in defaults in the role for pure defaults
+  - on the role inclusions passing in variables
+  - via a separate file via a group_vars/all file
+
