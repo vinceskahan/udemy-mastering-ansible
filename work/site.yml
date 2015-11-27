@@ -1,0 +1,5 @@
+---
+- include: control.yml
+- include: database.yml
+- include: webserver.yml
+- include: loadbalancer.yml
