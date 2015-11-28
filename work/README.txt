@@ -46,3 +46,9 @@ see more complicated changed_when example in nginx/tasks/main.yml
 lecture 46
 ==========
 added commented out ansible.cfg stanza re: enabling pipelining for performance
+
+lecture 48
+==========
+--step option
+--list-tasks option
+--start-at-task option
