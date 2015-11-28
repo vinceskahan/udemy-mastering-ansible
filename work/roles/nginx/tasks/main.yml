@@ -18,8 +18,17 @@
 - name: get active sites
   shell: ls -1 /etc/nginx/sites-enabled
   register: active
-  tags: [ 'configure' ]
   changed_when: "active.stdout_lines != sites.keys()"
+  tags: [ 'configure' ]
+
+# debug our active sites
+# - debug: var=active.stdout_lines
+
+# debug our db_name (test how the hierarchy of vars resolved)
+# - debug: var=db_name
+
+# debug top-level variables
+# - debug: var=vars
 
 - name: remove undesired sites
   file: path=/etc/nginx/sites-enabled/{{ item }} state=absent

@@ -62,3 +62,10 @@ lecture 50
 --syntax-check
 --check to do a dry run
 note: you always need an inventory file, even if it's a dummy empty file
+
+lecture 51
+==========
+- debug: var=somevariblehere (to show a variable's value)
+note: nice thing is debug shows 'ok' on the summary
+
+
