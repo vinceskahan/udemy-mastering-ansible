@@ -31,3 +31,9 @@ he puts vars in three places:
 lecture 43
 ==========
 limit execution to a host via "--limit hostname" 
+
+lecture 
+========
+add "--list-tags" to report which tags are where
+add "--tags 'something'" to run just that
+add "--skip-tags 'something'" to skip just that
