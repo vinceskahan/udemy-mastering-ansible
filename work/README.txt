@@ -56,3 +56,9 @@ lecture 48
 lecture 49
 ==========
 --limit @/home/user/something.retry option to rerun just the last failed hosts based on retry files
+
+lecture 50
+==========
+--syntax-check
+--check to do a dry run
+note: you always need an inventory file, even if it's a dummy empty file
