@@ -28,3 +28,6 @@ he puts vars in three places:
   - on the role inclusions passing in variables
   - via a separate file via a group_vars/all file
 
+lecture 43
+==========
+limit execution to a host via "--limit hostname" 
