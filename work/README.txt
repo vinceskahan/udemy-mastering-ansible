@@ -38,8 +38,11 @@ add "--list-tags" to report which tags are where
 add "--tags 'something'" to run just that
 add "--skip-tags 'something'" to skip just that
 
-
 lecture 45
 ==========
 add "changed_when: false" to suppress showing changed and forcing just ok/failed result
 see more complicated changed_when example in nginx/tasks/main.yml
+
+lecture 46
+==========
+added commented out ansible.cfg stanza re: enabling pipelining for performance
