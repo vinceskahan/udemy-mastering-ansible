@@ -65,10 +65,16 @@ note: you always need an inventory file, even if it's a dummy empty file
 
 lecture 51
 ==========
-- debug: var=somevariblehere (to show a variable's value)
+- debug: var=somevariablehere (to show a variable's value)
 note: nice thing is debug shows 'ok' on the summary
 
 lecture 52
 ==========
 - add the --private-key option to specify which key to use at runtime
   rather than using your client-side ssh config
+
+lecture 53
+==========
+- see use of the | for a block literal in yaml to preserve formatting
+- use of yaml anchors to set named variables to reuse elsewhere in the yaml file
+
