@@ -52,3 +52,7 @@ lecture 48
 --step option
 --list-tasks option
 --start-at-task option
+
+lecture 49
+==========
+--limit @/home/user/something.retry option to rerun just the last failed hosts based on retry files
