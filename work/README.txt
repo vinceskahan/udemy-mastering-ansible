@@ -68,4 +68,7 @@ lecture 51
 - debug: var=somevariblehere (to show a variable's value)
 note: nice thing is debug shows 'ok' on the summary
 
-
+lecture 52
+==========
+- add the --private-key option to specify which key to use at runtime
+  rather than using your client-side ssh config
