@@ -15,7 +15,7 @@ COPY ansible.pub /home/ansible/.ssh/authorized_keys
 RUN chown -R ansible:ansible /home/ansible/
 RUN echo "ansible ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# Setup for ansible installation
+# Setup for ansible installation (vds additions)
 RUN apt-get install -y git python-pip python-dev python-markupsafe software-properties-common
 RUN pip install ansible
 RUN ansible --version
