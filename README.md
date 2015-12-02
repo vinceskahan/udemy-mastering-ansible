@@ -10,3 +10,6 @@ note: the Vagrantfile assumes the hostmanager plugin is installed via:
 vagrant install plugin hostnmanager
 '''
 
+
+If you run docker, you'll want to change all references here to 'eth1' to be 'eth0'...
+
